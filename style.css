@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.navbar .kiri, .navbar .kanan div, .kiri div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: medium;
+}
+
+.kanan button{
+    background-color: green;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.navbar .kanan img{
+    width: 10px;
+    height: auto;
+}
+.navbar .kiri img{
+    width: 30px;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.lower{
+    background-color: rgb(47, 47, 47);
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.lower a{
+    color: rgb(211, 211, 211);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+input{
+    padding: 7px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
