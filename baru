@@ -1,0 +1,272 @@
+<!-- deklarasitipe dokumen -->
+ <!DOCTYPE html>
+ <!--elemen root untuk file html-->
+<html>
+<!--metadata-->
+<head>
+    <!--nama tab-->
+<title>W3School copy paste</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<!--konten halaman web-->
+<body>
+  <nav class="navbar">
+<div class="kiri">
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/w3schools-logo-icon.png" alt="logo">
+    <div>
+        <a href="#">tutorials</a>
+        <a href="#">references</a>
+        <a href="#">exercises</a>
+        <a href="#">certificates</a>
+
+    </div>
+<input type="search" name="Search..." id="" placeholder="Search..." >
+
+<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></a>
+
+</div>
+<div class="kanan">
+<div> 
+<a href="#">bootcamps</a>
+  <a href="#">teachers</a>
+    <a href="#">upgrades</a>
+     <a href="#">get certified</a>
+     <button>sign in</button>
+</div>
+</div>
+  </nav>
+<div class="scroll-wrapper">
+  <button class="scroll-btn left" aria-label="Scroll left">‹</button>
+  <div class="lower" role="navigation" aria-label="Main topics">
+    <a href="#">HTML</a>
+    <a href="#">CSS</a>
+    <a href="#">JavaScript</a>
+    <a href="#">SQL</a>
+    <a href="#">JAVA</a>
+    <a href="#">PHP</a>
+    <a href="#">HOW TO</a>
+    <a href="#">W3.CSS</a>
+    <a href="#">C</a>
+    <a href="#">C++</a>
+    <a href="#">C#</a>
+    <a href="#">BOOTSTRAP</a>
+    <a href="#">REACT</a>
+    <a href="#">MYSQL</a>
+    <a href="#">JQUERY</a>
+    <a href="#">EXCEL</a>
+    <a href="#">XML</a>
+    <a href="#">DJANGO</a>
+    <a href="#">PANDAS</a>
+    <a href="#">NODEJS</a>
+    <a href="#">TYPESCRIPT</a>
+    <a href="#">ANGULAR</a>
+    <a href="#">ANGULARJS</a>
+    <a href="#">GIT</a>
+    <a href="#">POSTGRESQL</a>
+    <a href="#">MONGODB</a>
+    <a href="#">ASP</a>
+    <a href="#">AI</a>
+    <a href="#">R</a>
+    <a href="#">GO</a>
+    <a href="#">KOTLIN</a>
+    <a href="#">SWIFT</a>
+    <a href="#">SASS</a>
+    <a href="#">VUE</a>
+    <a href="#">GEN AI</a>
+    <a href="#">SCIPY</a>
+    <a href="#">AWS</a>
+    <a href="#">CYBERSCURITY</a>
+    <a href="#">DATA SCIENCE</a>
+    <a href="#">INTRO TO PROGRAMMING</a>
+  </div>
+  <button class="scroll-btn right" aria-label="Scroll right">›</button>
+</div>
+
+<script>
+const lower = document.querySelector('.lower');
+const btnLeft = document.querySelector('.scroll-btn.left');
+const btnRight = document.querySelector('.scroll-btn.right');
+
+function updateButtons() {
+  btnLeft.disabled = lower.scrollLeft <= 0;
+  btnRight.disabled = lower.scrollLeft + lower.clientWidth >= lower.scrollWidth - 1;
+}
+
+btnLeft.addEventListener('click', () => {
+  lower.scrollBy({ left: -180, behavior: 'smooth' });
+});
+
+btnRight.addEventListener('click', () => {
+  lower.scrollBy({ left: 180, behavior: 'smooth' });
+});
+
+lower.addEventListener('scroll', updateButtons);
+window.addEventListener('resize', updateButtons);
+updateButtons();
+</script>
+
+<div class="tengah">
+  <h1>Learn to Code</h1>
+  <p><b>With the world's largest web developer site.</b></p>
+  <div class="search-box">
+    <input type="search" name="search" placeholder="Search our tutorials, e.g. HTML">
+    <button type="button" class="search-btn">Search</button>
+  </div>
+  <a href="#"><b>Not Sure Where To Begin?</b></a>
+</div>
+</body>
+
+</html>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.navbar .kiri, .navbar .kanan div, .kiri div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: medium;
+}
+
+.kanan button{
+    background-color: green;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.navbar .kanan img{
+    width: 10px;
+    height: auto;
+}
+.navbar .kiri img{
+    width: 30px;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.scroll-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    background-color: rgb(47, 47, 47);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.lower{
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 0;
+    scroll-behavior: smooth;
+}
+
+.lower::-webkit-scrollbar{
+    display: none;
+}
+
+.lower a{
+    color: rgb(211, 211, 211);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.scroll-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    min-height: 34px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,0.12);
+    color: rgb(228, 228, 228);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.scroll-btn:disabled{
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.tengah{
+    max-width: 760px;
+    margin: 36px auto 0;
+    padding: 32px 20px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.tengah h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #222;
+}
+
+.tengah p{
+    color: hsl(39, 50%, 50%);
+    font-size: 1.05rem;
+}
+
+.tengah a{
+    color: hsl(39, 50%, 50%);
+    font-weight: 600;
+}
+
+.search-box{
+    width: 90%;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid #6d6d6d;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.search-box input{
+    flex: 1;
+    padding: 12px 14px;
+    border: none;
+    outline: none;
+}
+
+.search-box button.search-btn{
+    padding: 12px 18px;
+    border: none;
+    background-color: #127717;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search-box button.search-btn:hover{
+    background-color: #127717;
+}
+
+input{
+    padding: 7px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
